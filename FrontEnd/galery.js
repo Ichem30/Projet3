@@ -11,7 +11,7 @@ export function genererGalerie(works){
         const imageFigure = document.createElement ("img")
         imageFigure.src = works[i].imageUrl
         imageFigure.crossOrigin = "Anonymous"
- 
+
 
 
         gallery.appendChild(figure)

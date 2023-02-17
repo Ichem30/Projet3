@@ -188,6 +188,42 @@ footer nav ul {
 
 /* MON CSS*/
 
+.none {
+	display: none;
+}
+
+.visible{
+	display: block;
+}
+
+/*STREAMER*/
+#streamer{
+	display: none;
+	justify-content: center;
+	background-color: black;
+	width: 100%;
+	
+}
+
+#streamer p{
+	display: flex;
+	font-family: 'Work Sans';
+	font-weight: 400;
+	color: white;
+	align-items: center;
+}
+
+#streamer-btn{
+	width: auto;
+	height: 38px;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	font-weight: 500;
+	margin: 11px 0 12px 21px;
+	border-radius: 60px;
+	padding: 0 23px 0 23px;
+}
+
 /*HEADER*/
 
 header a{
