@@ -2,8 +2,6 @@ export const reponse = await fetch("http://localhost:5678/api/works");
 export const works = await reponse.json();
 export const gallery = document.querySelector(".gallery")
 
-console.log(works)
-
 export function genererGalerie(works){
     
     for (let i = 0; i < works.length; i++) {
