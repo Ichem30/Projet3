@@ -11,9 +11,10 @@
 	<link rel="stylesheet" href="./assets/style.css">
 	<script type="module" src="index.js"></script>
 	<script type="module" src="filter.js"></script>
+	<script type="module" src="modal.js"></script>
 </head>
 <body>
-	<div id="streamer">
+	<div id="streamer" style="display: none;">
 		<p>Mode édition</p>
 		<button id="streamer-btn">Publier les changements</button>
 	</div>
@@ -25,7 +26,7 @@
 			<li><a href="index.html">projets</a></li>
 			<li><a href="#contact">contact</a></li>
 			<li><a href="login.html" class="login-btn">login</a></li>
-			<li><a href="#" class="logout-btn"> logout</a></li>
+			<li><a href="#" class="logout-btn" style="display: none;"> logout</a></li>
 			
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
@@ -44,7 +45,15 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<div class="projects"> <h2>Mes Projets</h2>  <a href="#modal1" class="js-modal">Modifier</a></div>
+
+		<aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="boite modale" style="display:none;">
+			<div class="modal-container js-modal-stop">
+				<button class="js-modal-close">Fermer</button>
+				
+			</div>
+		</aside>
+
 		<div class="buttons"> 
 			<button class="btn btn-all">Tous</button>
 			<button class="btn btn-objects">Objets</button>
