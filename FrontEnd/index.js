@@ -7,7 +7,7 @@ genererGalerie(works);
 
 // window.localStorage.removeItem("nom");
 
-const token = localStorage.getItem('token')
+export const token = localStorage.getItem('token')
 const loginBtn = document.querySelector('.login-btn')
 const logoutBtn = document.querySelector('.logout-btn')
 const streamer = document.querySelector('#streamer')

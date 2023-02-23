@@ -1,5 +1,10 @@
+import { works } from "./galery.js"
+import { genererGalerieModal } from "./galery.js"
+import { modalGalery } from "./galery.js"
+
 let modal = null
 
+// Fonction pour l'ouverture de la modale
 const openModal = function (e) {
     e.preventDefault()
     const target = document.querySelector(e.target.getAttribute('href'))
@@ -10,11 +15,14 @@ const openModal = function (e) {
     modal.addEventListener('click', closeModal)
     modal.querySelector('.js-modal-close').addEventListener('click', closeModal)
     modal.querySelector('.js-modal-stop').addEventListener('click', stopPropagation)
+    genererGalerieModal(works)
 }
 
-const closeModal = function (e ){
+// Fonction pour la fermeture de la modale
+const closeModal = function (e){
     if (modal === null) return
     e.preventDefault()
+    
     modal.style.display = 'none'
     modal.setAttribute('aria-hidden', 'true')
     modal.removeAttribute('aria-modal')
@@ -22,19 +30,27 @@ const closeModal = function (e ){
     modal.querySelector('.js-modal-close').removeEventListener('click', closeModal)
     modal.querySelector('.js-modal-stop').removeEventListener('click', stopPropagation)
     modal = null
+    modalGalery.innerHTML = ''
+    
 }
 
+// StopPropagation pour retirer les évènements de fermeture à l'intérieur des parents
 const stopPropagation = function (e) {
     e.stopPropagation()
 }
 
+// Evenement sur tout les liens contenant .js-modal
 document.querySelectorAll('.js-modal').forEach(a => {
     a.addEventListener('click', openModal)
   
 })
 
+// Appuyer sur echap pour fermer la page
 window.addEventListener('keydown', (e) =>{
     if (e.key === "Escape" || e.key === "Esc") {
         closeModal(e) 
     }
 })
+
+// 2 modal différentes pour l'ajout photo en js
+// fetch category sur l'api et map pour avoir un tableau de catégories et l'afficher dans la modal 2

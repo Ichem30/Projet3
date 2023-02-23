@@ -1,4 +1,4 @@
-import { works } from "./galery.js";
+
 
 const form = document.querySelector('#form-login')
 
