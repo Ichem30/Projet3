@@ -246,6 +246,7 @@ footer nav ul {
 }
 
 .modal-container{
+	position: relative;
 	overflow: auto;
 	width: 630px;
 	height: 731px;
@@ -293,9 +294,15 @@ footer nav ul {
 	line-height: 30px;
 }
 
-.js-modal-close{
-	cursor: pointer;
+.projects-edit{
 	display: flex;
+}
+
+.js-modal-close{
+	display: flex;
+	position: absolute;
+	right: 20px;
+	cursor: pointer;
 	justify-content: right;
 }
 
