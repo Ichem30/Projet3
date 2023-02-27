@@ -1,6 +1,7 @@
 import { works } from "./galery.js"
 import { genererGalerieModal } from "./galery.js"
 import { modalGalery } from "./galery.js"
+import { checkForm, imgPreview, postImg } from "./post-img.js";
 
 const modal1 = document.getElementById('modal1')
 const modal2 = document.getElementById('modal2')
@@ -36,7 +37,6 @@ const closeModal = function (e){
     modal.querySelector('.js-modal-stop').removeEventListener('click', stopPropagation)
     modal = null
     modalGalery.innerHTML = ''
-    
 }
 
 // StopPropagation pour retirer les évènements de fermeture à l'intérieur des parents
@@ -68,5 +68,8 @@ window.addEventListener('keydown', (e) =>{
     }
 })
 
+imgPreview()
+checkForm()
+postImg()
 // 2 modal différentes pour l'ajout photo en js
 // fetch category sur l'api et map pour avoir un tableau de catégories et l'afficher dans la modal 2

@@ -59,7 +59,7 @@
 				
 				<div class="modal-btn">
 				<div id="modal-bar"></div>
-				<a href="#modal2" class="modal-add js-modal">Ajouter une Photo</a>
+				<a href="#modal2" class="modal-add js-modal">Ajouter une photo</a>
 				<button id="modal-delete">Supprimer la galerie</button>
 				</div>
 
@@ -70,13 +70,36 @@
 			<div class="modal-container js-modal-stop">
 				<i class="fa-sharp fa-solid fa-arrow-left-long js-modal-back"></i>
 				<i class="fa-sharp fa-solid fa-xmark js-modal-close"></i>
-				<h2 id="modal-title">Galerie Photo</h2>
+
 				
-				<div class="modal-img-container">
-					<i class="fa-regular fa-image modal-icon"></i>
-					<div class="modal-img-add">+ Ajouter une photo</div>
-					<p>jpg, png: 4mo max</p>
-				</div>
+				<h2 id="modal-title">Ajout Photo</h2>
+
+				
+					<div class="modal-img-container">
+						<form id="form-addimg" class="form-addimg" method="post"></form>
+							<i class="fa-regular fa-image modal-icon"></i>
+							<button id="modal-img-add">+ Ajouter une photo</button>
+							<input type="file" id="img-input" style="display:none" accept=".png, .jpg, .jpeg">
+							<img src="#" id="img-preview" style="display:none" alt="Aperçu de l'image" >
+							<p>jpg, png: 4mo max</p>
+						</form>
+					</div>
+
+					<div class="form-info">
+						<h3>Titre</h3>
+						<input type="text" id="title-info">
+						<h3>Catégorie</h3>
+						<select id="category-info">
+							<option value="0"></option>
+							<option value="1">Objets</option>
+							<option value="2">Appartements</option>
+							<option value="3">Hôtels & restaurants</option>
+						</select>
+
+						<div id="modal-bar"></div>
+					</div>
+					<button id="form-valid">Valider</button>
+
 			</div>
 		</aside>
 

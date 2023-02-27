@@ -1,5 +1,6 @@
 import { token } from "./index.js";
 
+
 export const reponse = await fetch("http://localhost:5678/api/works");
 export const works = await reponse.json();
 export const gallery = document.querySelector(".gallery")
@@ -69,7 +70,10 @@ export function deleteWork(figure){
 })
 }
 
-
+document.getElementById('modal-img-add').addEventListener('click', function (e) {
+    e.preventDefault()
+    const input = document.getElementById('img-input').click()
+  })
 
 // Attribuer un id aux img pour les déplacer dans la liste
 // supprimer avec une requete delete et refetch la nouvelle liste après le delete pour refresh
