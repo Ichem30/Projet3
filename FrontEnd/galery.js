@@ -60,8 +60,6 @@ export function genererGalerieModal(works){
 
 }
 
-console.log(works)
-
 export function deleteWork(figure){
     const id = figure.id
     fetch("http://localhost:5678/api/works/"+ id, {

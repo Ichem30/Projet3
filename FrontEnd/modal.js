@@ -2,11 +2,15 @@ import { works } from "./galery.js"
 import { genererGalerieModal } from "./galery.js"
 import { modalGalery } from "./galery.js"
 
+const modal1 = document.getElementById('modal1')
+const modal2 = document.getElementById('modal2')
+
 let modal = null
 
 // Fonction pour l'ouverture de la modale
 const openModal = function (e) {
     e.preventDefault()
+    modalGalery.innerHTML = ''
     const target = document.querySelector(e.target.getAttribute('href'))
     target.style.display = null
     target.removeAttribute('aria-hidden')
@@ -22,8 +26,9 @@ const openModal = function (e) {
 const closeModal = function (e){
     if (modal === null) return
     e.preventDefault()
-    
-    modal.style.display = 'none'
+
+    modal1.style.display = 'none'
+    modal2.style.display = 'none'
     modal.setAttribute('aria-hidden', 'true')
     modal.removeAttribute('aria-modal')
     modal.removeEventListener('click', closeModal)
@@ -44,6 +49,17 @@ document.querySelectorAll('.js-modal').forEach(a => {
     a.addEventListener('click', openModal)
   
 })
+
+document.querySelector('.modal-add').addEventListener('click', () =>{
+    document.getElementById('modal1').style.display = "none"
+})
+
+
+document.querySelector('.js-modal-back').addEventListener('click', (e) =>{
+    document.getElementById('modal1').style.display = "flex"
+    document.getElementById('modal2').style.display = "none"
+})
+
 
 // Appuyer sur echap pour fermer la page
 window.addEventListener('keydown', (e) =>{

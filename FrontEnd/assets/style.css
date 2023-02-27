@@ -246,6 +246,9 @@ footer nav ul {
 }
 
 .modal-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	position: relative;
 	overflow: auto;
 	width: 630px;
@@ -255,6 +258,7 @@ footer nav ul {
 	padding: 20px;
 	background-color: white;
 	border-radius: 10px;
+
 }
 
 .modal-container figure{
@@ -301,9 +305,16 @@ footer nav ul {
 .js-modal-close{
 	display: flex;
 	position: absolute;
+	top: 20px;
 	right: 20px;
 	cursor: pointer;
-	justify-content: right;
+}
+
+.js-modal-back{
+	display: flex;
+	position: absolute;
+	left: 20px;
+	cursor: pointer;
 }
 
 #modal-bar{
@@ -320,7 +331,7 @@ footer nav ul {
 	flex-direction: column;
 }
 
-#modal-add{
+.modal-add{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -365,6 +376,43 @@ footer nav ul {
 	display: flex;
 	justify-content: center;
 	align-content: center;
+	cursor: pointer;
+}
+
+.modal-img-container{
+	display: flex;
+	position: absolute;
+	top: 126px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #E8F1F6;
+	height: 169px;
+	width: 420px;
+}
+
+.modal-icon{
+
+}
+
+.modal-img-container p{
+	font-size: 10px;
+	font-family: 'Work Sans';
+	color: #444444;
+}
+
+.modal-img-add{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #306685;
+	background-color: #CBD6DC;
+	font-weight: 500;
+	font-size: 14px;
+	font-family: 'Work Sans';
+	width: 173px;
+	height: 36px;
+	border-radius: 50px;
 	cursor: pointer;
 }
 
