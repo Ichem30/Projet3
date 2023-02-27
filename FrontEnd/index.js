@@ -1,5 +1,6 @@
 import { genererGalerie } from "./galery.js";
 import { works } from "./galery.js";
+import { checkForm, imgPreview, postImg } from "./post-img.js";
 
 
 genererGalerie(works);
@@ -29,4 +30,7 @@ logoutBtn.addEventListener('click', () => {
     window.location.reload()
 })
 
+imgPreview()
+checkForm()
+postImg()
 // La modale créé un tableau copie de works avec les éléments qu'on ajoute et supprime et le bouton dans le streamer sert à déployer ce tableau

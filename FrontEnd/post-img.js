@@ -1,4 +1,4 @@
-import { genererGalerie } from "./galery"
+
 
 export function imgPreview() {
     document.getElementById('img-input').addEventListener('change', function () {
@@ -57,8 +57,6 @@ export function postImg() {
             },
             body: formData
         })
-        container.innerHTML = ''
-        genererGalerie
         }catch (error) { console.error('Une erreur est survenue:', error) }
     })
 }
